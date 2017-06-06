@@ -2,9 +2,9 @@ class BaseCar
   attr_accessor :current_speed, :brand, :max_speed
 
   def initialize(args={})
-    @current_speed = args[:current_speed] || default_current_speed
-    @max_speed = args[:max_speed] || default_max_speed
-    @brand = args[:brand] || default_brand
+    @current_speed  = args[:current_speed] || default_current_speed
+    @max_speed      = args[:max_speed] || default_max_speed
+    @brand          = args[:brand] || default_brand
   end
 
   def accelerate
