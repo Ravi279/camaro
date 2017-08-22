@@ -2,8 +2,8 @@ class BaseCar
   attr_accessor :current_speed, :brand, :max_speed
 
   def initialize(args={})
-    @current_speed  = args[:current_speed] || default_current_speed
-    @max_speed      = args[:max_speed] || default_max_speed
+    @current_speed  = (args[:current_speed] || default_current_speed).to_i
+    @max_speed      = (args[:max_speed] || default_max_speed).to_i
     @brand          = args[:brand] || default_brand
   end
 
@@ -47,6 +47,3 @@ class CamaroCar < BaseCar
   end
 
 end
-
-sparky = CamaroCar.new()
-sparky.drive
